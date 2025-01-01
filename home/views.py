@@ -21,6 +21,6 @@ def home(request):
                 )
             except BadHeaderError:
                 return HttpResponse("Invalid header found")
-            return redirect("home")
+            return redirect("home:home")
 
     return render(request, "home/home.html", context={"form": form})
